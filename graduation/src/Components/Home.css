@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .header{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  input{
+    border-color: gray;
+    border-radius:20px ;
+    padding: 10px;
+    width:30%;
+  }
+  
+  .sidebar{
+    background-color: #7513D6;
+    width:10%;
+    height: 607px;
+    border-radius: 0 20px 20px 0;
+  }
+  .home, .about{
+    width:90px;
+  }
+  .favorites{
+    width:110px;
+  }
+  .chat{
+    width:80px;
+  }
+  .contact{
+    width:120px;
+  }
+  .home,.favorites, .chat, .about, .contact{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    color:#fff;
+  }
+  .btn{
+    padding: 20px 0;
+  }
+  .btn button{
+    margin-top: 300px;
+    padding: 10px;
+    width:90px;
+    border-radius: 10px;
+    border: 0;
+  }
