@@ -1,0 +1,95 @@
+.header{
+    padding: 20px 10px;
+     text-align: center;
+     width:auto;
+    border-bottom: 1px solid rgb(146, 145, 145); 
+   }
+   .srch-input{
+     border: 1px solid #854CFF;
+     height: 40px;
+   }
+   form{
+    position: relative;
+   }
+   .flex{
+    display:flex;
+    margin-left: 400px;
+    position: absolute;
+    top:10px;
+    z-index: 1;
+    gap:10px;
+   }
+   .magnifier{
+      margin-left: 30px;
+      padding:0 10px;
+      color:#858585;
+   }
+  .place{
+    color:#adadad;
+    margin-bottom: 10px;
+  }
+   .profile{
+    display: flex;
+    padding: 6 4 0 30px;
+    margin-left: 1120px;
+    margin-top: -40px;
+   }
+   .reg{
+    color:#5443C3;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+   .icon{
+    padding-left: 5px;
+    color:gray;
+    position: relative;
+   }
+   .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(178.18deg, #5443C3 -13.56%, #281AC8 158.3%);
+    position: absolute;
+    z-index: 1;
+    font-size: 10px;
+    color: #ffffff;
+    top: -10px;
+    left:20px;
+    bottom:100px;
+    right:-5px
+   }
+   p{
+    margin-top: 8px;
+    font-size: 14px;
+   }
+ input{
+     border-color: gray;
+     border-radius:30px ;
+     padding: 10px;
+     width:40%;
+   }
+   .profile-img{
+    margin-left: 10px;
+   }
+   .profile-img img{
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    object-fit: cover;
+   }
+   .home-section{
+    width:90%;   
+    margin-left: 120px; 
+   }
+   .header{
+    display: block;
+   } 
+   .icon{
+    position: relative;
+   }
+    .notification{
+    display:none;
+  }
+  .clear{
+    clear: both;
+  }

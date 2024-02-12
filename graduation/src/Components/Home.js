@@ -1,69 +1,103 @@
-import { faBookmark, faMessage, faMagnifyingGlass, faBell, faEllipsisVertical, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faMessage, faEllipsisVertical, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Sidebar.css';
-import profile from '../images/profile.jpg';
-import owner from '../images/owner.jpg';
-import design from '../images/design.jpg'
-import notifypic from '../images/notifypic.jpeg';
-import notifypic1 from '../images/notifypic1.jpeg';
-import notifypic2 from '../images/notifypic2.jpeg';
-import notifypic3 from '../images/notifypic3.jpeg';
-import React from 'react';
-// import withReactContent from 'sweetalert2-react-content'
-function Sidebar() {
-    // const bookMark= document.querySelector(".edit-book");
-    // bookMark.addEventListener("click", ()=>{
-    //     console.log("clicked");
-    // })
-    // const showDiv=()=>{
-    //     document.getElementById('Setting').style.display = "block";
-    // }
-    //  function showNotify() {
-    //     document.getElementById('Icon').style.display = "block";
-    //  }
-    // const changeColor=()=>{
-    //     document.getElementsByClassName("category").style.backgroundColor="#7513D6";
-    // }
-    // const msg=Swal.fire({
-    //     title: "Do you want to save the changes?",
-    //     showDenyButton: true,
-    //     showCancelButton: true,
-    //     confirmButtonText: "Save",
-    //     denyButtonText: `Don't save`
-    //   }).then((result) => {
-    //     /* Read more about isConfirmed, isDenied below */
-    //     if (result.isConfirmed) {
-    //       Swal.fire("Saved!", "", "success");
-    //     } else if (result.isDenied) {
-    //       Swal.fire("Changes are not saved", "", "info");
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import { useState, useRef } from 'react';
+import './Home.css';
+import axios from 'axios';
+import willKiny from '../images/willKiny.png';
+import project1 from '../images/project1.jfif';
+import project2 from '../images/project2.jfif';
+import project4 from '../images/project4.jfif';
+import project5 from '../images/project5.jfif';
+import Header from './Header';
+import Sidebar from './Sidebar';
+function Home(){
+  
+     //editing menu
+     const [isOpen, setIsOpen] = useState(false);
+    // const [open, setOpen]=useState(false);
+    // const Menu=['Hide', 'Save as', 'Copy Link'];
+    // const menuRef= useRef();
+    // const divRef= useRef();
+    // window.addEventListener('click', (e) => {
+    //     if(e.target !== menuRef.current && e.target !== divRef.current){
+    //         setOpen(false);
     //     }
-    //   });
+    // })
+        //icons color
+        //heart icon
+        const [projectId,setProjectId]=useState(0);
+        const Req=()=>{
+            axios.get('https://jsonplaceholder.typicode.com/projects')
+            .then(res => {console.log(res);
+                setProjectId(res.id)
+            }).catch(err =>{
+                console.log(err);
+            })
+        }
+
+          // Define state to keep track of colors for each icon
+//   const [iconColors, setIconColors] = useState({
+//     icon1: '#696F8C',
+//     icon2: '#696F8C',
+//   });
+    // Function to handle click on an icon
+    // const handleIconClick = (iconId, color) => {
+        // Update the state with the new color for the clicked icon
+    //     setIconColors(prevColors => ({
+    //       ...prevColors,
+    //       [iconId]: color,
+    //     }));
+    //   };
+    
+    //  const [background, setBackground] =useState(true);
+    //  const [number, setNumber] =useState(true);
+    //  const count =useRef();
+    //  function love(){
+    //      setNumber(!number)
+    //     setBackground(!background)
+    //  }
+    // const color = background ? '#D9D9D9' : 'red'; 
+    //const numbers = background ? '' : count.current.value = 1; 
+    // //bookmark icon
+    // const [backgroundBook, setBackgroundBook] =useState(true);
+    // const bookmark =useRef();
+    // function Mark(){
+    //     setBackgroundBook(!backgroundBook)
+    // }
+    // const bookColor = background ? '#D9D9D9' : 'yellow'; 
+    //category
+    // const [changeColor, setChangeColor]=useState(false);
+    // const handelClick=() =>{
+    //     setChangeColor(!changeColor)
+    // }
+    //categories color
+    // const [categoryColor, setCategoryColor] = useState('#fff');
+    // const categoryClick = categoryColor =>{
+    //     setCategoryColor(categoryColor)
+    // }
+    // useEffect(()=>{
+    //     document.getElementsByClassName('Category').style.backgroundColor=categoryColor;
+    // },[categoryColor])
+   //hide option
+   const [isActive, setIsActive] = useState(false);
+   const handleClick = () => {
+     // 👇️ toggle
+     setIsActive(current => !current);
+     // 👇️ or set to true
+     // setIsActive(true);
+   };
     return (
         <>
-            <div className='main'>
-                <div className='home-section'>
-                    <div className='header'>
-                        <div className='search'>
-                            <form className='frm'>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                                <input type="text" placeholder="Search.." name="search" />
-                            </form>
-                        </div>
-                        <div className='profile'>
-                            <p>Registered</p>
-                            <div className='profile-img'>
-                                <img src={profile} alt="profile" />
-                            </div>
-                            <div className='icon' id='Icon'>
-                                <FontAwesomeIcon icon={faBell} size='2x' />
-                            </div>
-                        </div>
-                    </div>
+                <Header />
+               <Sidebar />
+            <div className='home-section'>
                     <div className='content'>
                         <div className='head'>
                             <h1 className='title-head'>Discover Course & Bootcamp</h1>
                             <div className='categories'>
-                                <div className='category'>All projects</div>
+                                <div className='category fcategory'>All projects</div>
                                 <div className='category'>UI/UX design</div>
                                 <div className='category cat-w'>Product Management</div>
                                 <div className='category cat-w'>Branding Design</div>
@@ -72,35 +106,110 @@ function Sidebar() {
                             </div>
                         </div>
                         <div className='projects'>
-                            <div className='project'>
+                            <div className='project' style={{
+                                backgroundColor: isActive ? '#e6f4f7' : '',
+                                color: isActive ? 'white' : '',
+                                }}>
                                 <div className='owner'>
                                     <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
+                                        <img src={willKiny} alt="profile" />
                                     </div>
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
+                                           <i><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
-                                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                                            <i onClick={() => setIsOpen(!isOpen)} onBlur={() => setIsOpen(false)}>
+                                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                                                {isOpen && <div className='settings drop-down'>
+                                                {isOpen && <div className='option drop-line' onClick={handleClick} >Hide
+                                                    </div>}
+                                                {isOpen && <div className='option drop-line'>Add to favorite
+                                                    </div>}
+                                                {isOpen && <div className='option'>Copy link</div>}  
+                                                </div>}
+                                            </i>
+                                            
+                                        </div>
+                                        {/* ref={divRef} onClick={()=>setOpen(!open)} */}
+                                        {/* { open && (<div className='settings' id='Setting' ref={menuRef}>
+                                                <ul>
+                                                    {Menu.map((menu) => (
+                                                    <li onClick={()=> setOpen(false)} className="drop-down"key={menu}>
+                                                        {menu} 
+                                                        
+                                                         <div className='drop-line' style={{borderBottomWidth: 1, 
+                                                            borderBottomStyle:'solid',borderBottomColor: 'rgb(0, 0, 0)',}}></div>
+                                                            
+                                                    </li>))}
+                                                </ul>
+                                                </div>)} */}
+                                    </div>
+                                </div>
+                                <div className='project-details'>
+                                    <p className='project-text'>Lorem spanLoremspan</p>
+                                    <div className='project-img'>
+                                        <img src={project1} alt='project' />
+                                    </div>
+                                </div>
+                                <div className='react'>
+                                    <div className='like'>
+                                        <div className='icon-color'>
+                                          <i onClick={Req}><FontAwesomeIcon icon={faHeart} /></i>
+                                          {projectId.style.color="red"}
+                                            <span style={{color:'#696F8C'}}>15 react</span>
+                                        </div>
+                                       
+                                    </div>
+                                    <div className='comment'>
+                                        <div className='icon_color'>
+                                            <i style={{marginTop:-15,}}><FontAwesomeIcon icon={faMessage} /></i>
+                                        </div>
+                                        <div className='number-section'>
+                                            <span>14</span>
+                                            <p className='react-text'>Comments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='project' style={{
+                                backgroundColor: isActive ? '#e6f4f7' : '',
+                                color: isActive ? 'white' : '',
+                                }}>
+                                <div className='owner'>
+                                    <div className='owner-img'>
+                                        <img src={willKiny} alt="profile" />
+                                    </div>
+                                    <p className='owner-name'>Will Kiney</p>
+                                    <div className='icon-part'>
+                                        <div className='edit edit-book'>
+                                           <i><FontAwesomeIcon icon={faBookmark} /></i> 
+                                        </div>
+                                        <div className='edit edit-delete'>
+                                            <i onClick={() => setIsOpen(!isOpen)} onBlur={() => setIsOpen(false)}><FontAwesomeIcon icon={faEllipsisVertical} />
+                                                {isOpen && <div className='settings drop-down'>
+                                                {isOpen && <div className='option drop-line' onClick={handleClick} >Hide
+                                                    </div>}
+                                                {isOpen && <div className='option drop-line'>Add to favorite
+                                                    </div>}
+                                                {isOpen && <div className='option'>Copy link</div>}  
+                                                </div>}
+                                            </i>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='project-details'>
                                     <p className='project-text'>Lorem spanLoremspan</p>
                                     <div className='project-img'>
-                                        <img src={design} alt='project' />
+                                        <img src={project2} alt='project' />
                                     </div>
                                 </div>
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <FontAwesomeIcon icon={faHeart} />
-                                        </div>
-                                        <div className='number-section'>
-                                            <span>15</span>
-                                            <p className='react-text'>Reacts</p>
+                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                     </div>
                                     <div className='comment'>
@@ -117,12 +226,12 @@ function Sidebar() {
                             <div className='project'>
                                 <div className='owner'>
                                     <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
+                                        <img src={willKiny} alt="profile" />
                                     </div>
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
+                                         <i><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
                                             <FontAwesomeIcon icon={faEllipsisVertical} />
@@ -132,17 +241,14 @@ function Sidebar() {
                                 <div className='project-details'>
                                     <p className='project-text'>Lorem spanLoremspan</p>
                                     <div className='project-img'>
-                                        <img src={design} alt='project' />
+                                        <img src={project2} alt='project' />
                                     </div>
                                 </div>
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <FontAwesomeIcon icon={faHeart} />
-                                        </div>
-                                        <div className='number-section'>
-                                            <span>15</span>
-                                            <p className='react-text'>Reacts</p>
+                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <span  style={{color:'#696F8C'}}>react</span>
                                         </div>
                                     </div>
                                     <div className='comment'>
@@ -159,7 +265,7 @@ function Sidebar() {
                             <div className='project'>
                                 <div className='owner'>
                                     <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
+                                        <img src={willKiny} alt="profile" />
                                     </div>
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
@@ -174,17 +280,14 @@ function Sidebar() {
                                 <div className='project-details'>
                                     <p className='project-text'>Lorem spanLoremspan</p>
                                     <div className='project-img'>
-                                        <img src={design} alt='project' />
+                                        <img src={project4} alt='project' />
                                     </div>
                                 </div>
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <FontAwesomeIcon icon={faHeart} />
-                                        </div>
-                                        <div className='number-section'>
-                                            <span>15</span>
-                                            <p className='react-text'>Reacts</p>
+                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <span  style={{color:'#696F8C'}}> react</span>
                                         </div>
                                     </div>
                                     <div className='comment'>
@@ -201,7 +304,7 @@ function Sidebar() {
                             <div className='project'>
                                 <div className='owner'>
                                     <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
+                                        <img src={willKiny} alt="profile" />
                                     </div>
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
@@ -216,103 +319,14 @@ function Sidebar() {
                                 <div className='project-details'>
                                     <p className='project-text'>Lorem spanLoremspan</p>
                                     <div className='project-img'>
-                                        <img src={design} alt='project' />
-                                    </div>
-                                </div>
-                                <div className='react'>
-                                    <div className='like'>
-                                        <div className='icon-color'>
-                                            <FontAwesomeIcon icon={faHeart} />
-                                        </div>
-                                        <div className='number-section'>
-                                            <span>15</span>
-                                            <p className='react-text'>Reacts</p>
-                                        </div>
-                                    </div>
-                                    <div className='comment'>
-                                        <div className='icon_color'>
-                                            <FontAwesomeIcon icon={faMessage} />
-                                        </div>
-                                        <div className='number-section'>
-                                            <span>14</span>
-                                            <p className='react-text'>Comments</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='project'>
-                                <div className='owner'>
-                                    <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
-                                    </div>
-                                    <p className='owner-name'>Will Kiney</p>
-                                    <div className='icon-part'>
-                                        <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
-                                        </div>
-                                        <div className='edit edit-delete'>
-                                            <FontAwesomeIcon icon={faEllipsisVertical} />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='project-details'>
-                                    <p className='project-text'>Lorem spanLoremspan</p>
-                                    <div className='project-img'>
-                                        <img src={design} alt='project' />
+                                        <img src={project5} alt='project' />
                                     </div>
                                 </div>
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color' id='heartIcon'>
-                                            <FontAwesomeIcon icon={faHeart} />
-                                        </div>
-
-                                        <div className='number-section'>
-                                            <span>15</span>
-                                            <p className='react-text'>Reacts</p>
-                                        </div>
-                                    </div>
-                                    <div className='comment'>
-                                        <div className='icon_color'>
-                                            <FontAwesomeIcon icon={faMessage} />
-                                        </div>
-                                        <div className='number-section'>
-                                            <span>14</span>
-                                            <p className='react-text'>Comments</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='project'>
-                                <div className='owner'>
-                                    <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
-                                    </div>
-                                    <p className='owner-name'>Will Kiney</p>
-                                    <div className='icon-part'>
-                                        <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
-                                        </div>
-                                        <div className='edit edit-delete'>
-                                            <FontAwesomeIcon icon={faEllipsisVertical} />
-                                        </div>
-                                        <div className='settings' id='Setting'>
-                                            <div className='hide'>Hide</div>
-                                            <div className='save'>Save as</div>
-                                            <div className='copy'>Copy</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='project-details'>
-                                    <p className='project-text'>Lorem spanLoremspan</p>
-                                    <div className='project-img'>
-                                        <img src={design} alt='project' />
-                                    </div>
-                                </div>
-                                <div className='react'>
-                                    <div className='like'>
-                                        <div className='icon-color'>
-                                            <FontAwesomeIcon icon={faHeart} />
+                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                         <div className='number-section'>
                                             <span>15</span>
@@ -333,7 +347,7 @@ function Sidebar() {
                             <div className='project'>
                                 <div className='owner'>
                                     <div className='owner-img'>
-                                        <img src={owner} alt="profile" />
+                                        <img src={willKiny} alt="profile" />
                                     </div>
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
@@ -348,13 +362,14 @@ function Sidebar() {
                                 <div className='project-details'>
                                     <p className='project-text'>Lorem spanLoremspan</p>
                                     <div className='project-img'>
-                                        <img src={design} alt='project' />
+                                         <img src={project2} alt='project' /> 
                                     </div>
                                 </div>
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <FontAwesomeIcon icon={faHeart} />
+                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                         <div className='number-section'>
                                             <span>15</span>
@@ -371,86 +386,50 @@ function Sidebar() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='notification'>
-                                    <div className='notify-head'>
-                                        <p className='notify-title'>Notification</p>
-                                        <p className='Mark'>Mark all as read</p>
+                            </div>
+                            <div className='project'>
+                                <div className='owner'>
+                                    <div className='owner-img'>
+                                        <img src={willKiny} alt="profile" />
                                     </div>
-                                    <div className='notify-content'>
-                                        <div className='notify-img'>
-                                            <img src={notifypic} alt='profile' />
+                                    <p className='owner-name'>Will Kiney</p>
+                                    <div className='icon-part'>
+                                        <div className='edit edit-book'>
+                                            <FontAwesomeIcon icon={faBookmark} />
                                         </div>
-                                        <div className='notify-text'>
-                                            <p className='notify-person'>Alex Carpena</p>
-                                            <div className='notify-sentence'>
-                                                <div className='notify-line'></div>
-                                                <div className='notiry-child'>
-                                                    <p className='notify-txt'>
-                                                        Abeer Mohamed liked your post.
-                                                    </p>
-                                                    <span className='notify-time'>8 min ago</span>
-                                                </div>
-                                            </div>
+                                        <div className='edit edit-delete'>
+                                            <FontAwesomeIcon icon={faEllipsisVertical} />
                                         </div>
                                     </div>
-                                    <div className='notify-content'>
-                                        <div className='notify-img'>
-                                            <img src={notifypic1} alt='profile' />
-                                        </div>
-                                        <div className='notify-text'>
-                                            <p className='notify-person'>Well Kiney</p>
-                                            <div className='notify-sentence'>
-                                                <div className='notify-line'></div>
-                                                <div className='notiry-child'>
-                                                    <p className='notify-txt'>
-                                                        Well Kiney commented on your post.
-                                                    </p>
-                                                    <span className='notify-time'>10 min ago</span>
-                                                </div>
-                                            </div>
+                                </div>
+                                <div className='project-details'>
+                                    <p className='project-text'>Lorem spanLoremspan</p>
+                                    <div className='project-img'>
+                                        <img src={project2} alt='project' />
+                                    </div>
+                                </div>
+                                <div className='react'>
+                                    <div className='like'>
+                                        <div className='icon-color'>
+                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                     </div>
-                                    <div className='notify-content'>
-                                        <div className='notify-img'>
-                                            <img src={notifypic2} alt='profile' />
+                                    <div className='comment'>
+                                        <div className='icon_color'>
+                                            <FontAwesomeIcon icon={faMessage} />
                                         </div>
-                                        <div className='notify-text'>
-                                            <p className='notify-person'>Sara Ahmed</p>
-                                            <div className='notify-sentence'>
-                                                <div className='notify-line'></div>
-                                                <div className='notiry-child'>
-                                                    <p className='notify-txt'>
-                                                        Sara Ahmed sent you a message.
-                                                    </p>
-                                                    <span className='notify-time'>18 min ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='notify-content'>
-                                        <div className='notify-img'>
-                                            <img src={notifypic3} alt='profile' />
-                                        </div>
-                                        <div className='notify-text'>
-                                            <p className='notify-person'>Alex Carpena</p>
-                                            <div className='notify-sentence'>
-                                                <div className='notify-line'></div>
-                                                <div className='notiry-child'>
-                                                    <p className='notify-txt'>
-                                                        Mervat Mahear liked your post.
-                                                    </p>
-                                                    <span className='notify-time'>20 min ago</span>
-                                                </div>
-                                            </div>
+                                        <div className='number-section'>
+                                            <span>14</span>
+                                            <p className='react-text'>Comments</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    </div>
         </>
-    )
+    );
 }
-export default Sidebar;
+export default Home;
