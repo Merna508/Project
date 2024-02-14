@@ -18,11 +18,20 @@
   top: 0; 
   left: 0; 
 }
+.sidebar{
+  border-bottom:3px solid transparent;
+
+}
+/* .sidebar ul li, ul, .gap{
+  border-bottom:3px solid transparent;
+} */
 .chat,.about{
-  margin-left: 40px;
+  margin-left: -20px;
 }
 .gap{
-  margin-left: 6px;
+  margin-left: -35px;
+  /* border-bottom:3px solid transparent; */
+
 }
 .home, .about, .favorites, .chat, .contact{
   color: #fff;
@@ -36,6 +45,7 @@ li{
   list-style: none;
   width:120px;
   margin-left: -20px;
+  /* border-bottom:3px solid transparent; */
 }
 li:hover{
   background-color: rgba(255, 255, 255, 0.6);
@@ -43,17 +53,28 @@ li:hover{
   width: 120px;
   height:40px;
 }
+.gap:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 47px 0 0 47px;
+  width: 110px;
+  height:40px;
+  margin-left: -15px;
+}
 .btn{
   padding: 20px 0;
+  position: relative;
+  border-bottom:3px solid transparent;
+
 }
 .btn button{
-  margin-top: 150px;
+  margin-top: 110px;
   padding: 10px;
   width:90px;
   border-radius: 10px;
   border: 0;
   color: blue;
-}
-.clear{
-  clear: both;
+  position: fixed;
+  margin-left: -45px;
+
+
 }

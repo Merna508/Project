@@ -2,9 +2,8 @@ import { faBookmark, faMessage, faEllipsisVertical, faHeart } from '@fortawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import './Home.css';
-import axios from 'axios';
 import willKiny from '../images/willKiny.png';
 import project1 from '../images/project1.jfif';
 import project2 from '../images/project2.jfif';
@@ -12,8 +11,8 @@ import project4 from '../images/project4.jfif';
 import project5 from '../images/project5.jfif';
 import Header from './Header';
 import Sidebar from './Sidebar';
+// import Comments from './Comments/Comments';
 function Home(){
-  
      //editing menu
      const [isOpen, setIsOpen] = useState(false);
     // const [open, setOpen]=useState(false);
@@ -27,29 +26,20 @@ function Home(){
     // })
         //icons color
         //heart icon
-        const [projectId,setProjectId]=useState(0);
-        const Req=()=>{
-            axios.get('https://jsonplaceholder.typicode.com/projects')
-            .then(res => {console.log(res);
-                setProjectId(res.id)
-            }).catch(err =>{
-                console.log(err);
-            })
-        }
-
-          // Define state to keep track of colors for each icon
+        const [isActive1, setIsActive2] = useState(false);
+// //Define state to keep track of colors for each icon
 //   const [iconColors, setIconColors] = useState({
 //     icon1: '#696F8C',
 //     icon2: '#696F8C',
 //   });
-    // Function to handle click on an icon
-    // const handleIconClick = (iconId, color) => {
-        // Update the state with the new color for the clicked icon
-    //     setIconColors(prevColors => ({
-    //       ...prevColors,
-    //       [iconId]: color,
-    //     }));
-    //   };
+//    // Function to handle click on an icon
+//     const handleIconClick = (iconId, color) => {
+//        // Update the state with the new color for the clicked icon
+//         setIconColors(prevColors => ({
+//           ...prevColors,
+//           [iconId]: color,
+//         }));
+//       };
     
     //  const [background, setBackground] =useState(true);
     //  const [number, setNumber] =useState(true);
@@ -61,13 +51,13 @@ function Home(){
     // const color = background ? '#D9D9D9' : 'red'; 
     //const numbers = background ? '' : count.current.value = 1; 
     // //bookmark icon
-    // const [backgroundBook, setBackgroundBook] =useState(true);
+    const [backgroundBook, setBackgroundBook] =useState(true);
     // const bookmark =useRef();
-    // function Mark(){
-    //     setBackgroundBook(!backgroundBook)
-    // }
-    // const bookColor = background ? '#D9D9D9' : 'yellow'; 
-    //category
+    function Mark(){
+        setBackgroundBook(!backgroundBook)
+    }
+    const bookColor = backgroundBook ? '#D9D9D9' : 'yellow'; 
+    // category
     // const [changeColor, setChangeColor]=useState(false);
     // const handelClick=() =>{
     //     setChangeColor(!changeColor)
@@ -83,10 +73,12 @@ function Home(){
    //hide option
    const [isActive, setIsActive] = useState(false);
    const handleClick = () => {
-     // 👇️ toggle
+     // toggle
      setIsActive(current => !current);
-     // 👇️ or set to true
+     // or set to true
      // setIsActive(true);
+     //comment
+    //  const [commentOpen, setCommentOpen] = useState(false);
    };
     return (
         <>
@@ -105,9 +97,13 @@ function Home(){
                                 <div className='category cat-w'>Web Development</div>
                             </div>
                         </div>
+                        {/* style={{
+                                backgroundColor: isActive ? '#e6f4f7' : '',
+                                color: isActive ? 'white' : '',
+                                }} */}
                         <div className='projects'>
                             <div className='project' style={{
-                                backgroundColor: isActive ? '#e6f4f7' : '',
+                                backgroundColor: isActive ? '#f5f7f7' : '',
                                 color: isActive ? 'white' : '',
                                 }}>
                                 <div className='owner'>
@@ -117,7 +113,7 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                           <i><FontAwesomeIcon icon={faBookmark} /></i>
+                                           <i className='bmIcon'><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
                                             <i onClick={() => setIsOpen(!isOpen)} onBlur={() => setIsOpen(false)}>
@@ -156,14 +152,18 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                          <i onClick={Req}><FontAwesomeIcon icon={faHeart} /></i>
-                                          {projectId.style.color="red"}
-                                            <span style={{color:'#696F8C'}}>15 react</span>
+                                          <i>{isActive1? <FavoriteBorderOutlinedIcon  onClick={()=>{
+                                                setIsActive2(!isActive1)}}/>:
+                                            <FavoriteOutlinedIcon  style={{color:'red'}} onClick={()=>{
+                                                setIsActive2(!isActive1)}} />
+                                                }</i>
+                                            <span style={{color:'#696F8C'}}>react</span>
                                         </div>
                                        
                                     </div>
                                     <div className='comment'>
                                         <div className='icon_color'>
+                                        {/* onClick={()=>setCommentOpen(!commentOpen)} */}
                                             <i style={{marginTop:-15,}}><FontAwesomeIcon icon={faMessage} /></i>
                                         </div>
                                         <div className='number-section'>
@@ -172,11 +172,9 @@ function Home(){
                                         </div>
                                     </div>
                                 </div>
+                                {/* {commentOpen && <Comments />} */}
                             </div>
-                            <div className='project' style={{
-                                backgroundColor: isActive ? '#e6f4f7' : '',
-                                color: isActive ? 'white' : '',
-                                }}>
+                            <div className='project'>
                                 <div className='owner'>
                                     <div className='owner-img'>
                                         <img src={willKiny} alt="profile" />
@@ -184,17 +182,18 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                           <i><FontAwesomeIcon icon={faBookmark} /></i> 
+                                           <i className='bmIcon' onClick={Mark}><FontAwesomeIcon icon={faBookmark} style={{color:bookColor}} /></i> 
                                         </div>
                                         <div className='edit edit-delete'>
-                                            <i onClick={() => setIsOpen(!isOpen)} onBlur={() => setIsOpen(false)}><FontAwesomeIcon icon={faEllipsisVertical} />
-                                                {isOpen && <div className='settings drop-down'>
+                                            <i><FontAwesomeIcon icon={faEllipsisVertical} />
+                                            {/* onClick={() => setIsOpen(!isOpen)} onBlur={() => setIsOpen(false)} */}
+                                                {/* {isOpen && <div className='settings drop-down'>
                                                 {isOpen && <div className='option drop-line' onClick={handleClick} >Hide
                                                     </div>}
                                                 {isOpen && <div className='option drop-line'>Add to favorite
                                                     </div>}
                                                 {isOpen && <div className='option'>Copy link</div>}  
-                                                </div>}
+                                                </div>} */}
                                             </i>
                                         </div>
                                     </div>
@@ -208,7 +207,7 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <i><FavoriteBorderOutlinedIcon /></i>
                                             <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                     </div>
@@ -231,7 +230,7 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                         <i><FontAwesomeIcon icon={faBookmark} /></i>
+                                         <i className='bmIcon'><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
                                             <FontAwesomeIcon icon={faEllipsisVertical} />
@@ -247,7 +246,7 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <i><FavoriteBorderOutlinedIcon /></i>
                                             <span  style={{color:'#696F8C'}}>react</span>
                                         </div>
                                     </div>
@@ -270,7 +269,7 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
+                                            <i className='bmIcon'><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
                                             <FontAwesomeIcon icon={faEllipsisVertical} />
@@ -286,7 +285,7 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <i><FavoriteBorderOutlinedIcon /></i>
                                             <span  style={{color:'#696F8C'}}> react</span>
                                         </div>
                                     </div>
@@ -309,7 +308,7 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
+                                           <i className='bmIcon'><FontAwesomeIcon icon={faBookmark} /></i> 
                                         </div>
                                         <div className='edit edit-delete'>
                                             <FontAwesomeIcon icon={faEllipsisVertical} />
@@ -325,7 +324,7 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color' id='heartIcon'>
-                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <i><FavoriteBorderOutlinedIcon /></i>
                                             <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                         <div className='number-section'>
@@ -352,7 +351,7 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
+                                        <i className='bmIcon'><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
                                             <FontAwesomeIcon icon={faEllipsisVertical} />
@@ -368,7 +367,7 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <i><FavoriteBorderOutlinedIcon /></i>
                                             <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                         <div className='number-section'>
@@ -395,7 +394,7 @@ function Home(){
                                     <p className='owner-name'>Will Kiney</p>
                                     <div className='icon-part'>
                                         <div className='edit edit-book'>
-                                            <FontAwesomeIcon icon={faBookmark} />
+                                        <i className='bmIcon'><FontAwesomeIcon icon={faBookmark} /></i>
                                         </div>
                                         <div className='edit edit-delete'>
                                             <FontAwesomeIcon icon={faEllipsisVertical} />
@@ -411,7 +410,7 @@ function Home(){
                                 <div className='react'>
                                     <div className='like'>
                                         <div className='icon-color'>
-                                            <i><FontAwesomeIcon icon={faHeart} /></i>
+                                            <i><FavoriteBorderOutlinedIcon /></i>
                                             <span style={{color:'#696F8C'}}> react</span>
                                         </div>
                                     </div>

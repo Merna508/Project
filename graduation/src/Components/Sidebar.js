@@ -21,19 +21,18 @@ function Sidebar(){
 }
                             <li onClick={() => setShow(!show)}>
                                 <i><FontAwesomeIcon icon={faHouse} /></i>
-                                {/* <img src={home} alt="icon"/> */}
                                 <Link to={'/home'} className="home">Home</Link>
                             </li>
                             <li>
                                 <i><FontAwesomeIcon icon={faBookmark} /></i>
                                 <Link to={'/favorites'} className="favorites">Favorites</Link>
                             </li>
-                            <li>
-                               <i className='gap'><FontAwesomeIcon icon={faMessage} /></i>
+                            <li className='gap'>
+                               <i><FontAwesomeIcon icon={faMessage} /></i>
                                 <Link to={'/chat'} className="chat">Chat</Link>
                             </li>
-                            <li>
-                                <i className='gap'><FontAwesomeIcon icon={faUser} /></i>
+                            <li className='gap'>
+                                <i><FontAwesomeIcon icon={faUser} /></i>
                                 <Link to={'/about'} className="about">About</Link>
                             </li>
                             <li>
@@ -48,7 +47,6 @@ function Sidebar(){
                             Logout
                         </button>
                     </div>
-                    <div className="clear"></div>
                 </div>
         );
 }

@@ -1,0 +1,35 @@
+.formImage{
+    width: 90%;
+    height: 600px;
+}
+.title{
+    font: 80px Montserrat;
+    font-weight: 700px;
+    color: #fff;
+}
+.paragraph{
+    font: 25px Montserrat;
+    font-weight: 600px;
+    color: #fff;
+}
+.contact{
+    background-image: url("../images/getstartedback.jpeg");
+    background-size: 100% 100%;
+    background-position: center center;
+}
+.landbtn{
+    font-weight: 800;
+    background-color:#FFD054 ;
+    border-radius: 10px;
+}
+.loginbtn{
+    font-weight: 600;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0) 
+}
+.back{
+    height: 100vh;
+    background-color: #7413D6;
+}

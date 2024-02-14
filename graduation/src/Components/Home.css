@@ -74,6 +74,7 @@
    }
    .category:hover{
     background: #7413D6;
+    color: #ffffff;
    }
    .fcategory{
     background: #7413D6;
@@ -131,6 +132,9 @@
   .icon-part{
     display: flex;
     margin-left: 120px;
+  }
+  .bmIcon{
+    color: #D9D9D9;
   }
   .notification{
     /* backgroundColor:'#e7e7e7';

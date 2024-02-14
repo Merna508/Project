@@ -2,27 +2,13 @@ import './Home.css';
 import { faMagnifyingGlass, faBell} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import profilepic from '../images/profilepic.png';
-
+import Header from './Header';
+import Sidebar from './Sidebar';
 function Favorites (){
     return(<>
+                <Header />
+               <Sidebar />
             <div className='home-section'>
-                    <div className='header'>
-                        <div className='search'>
-                            <form className='frm'>
-                                   <i><FontAwesomeIcon icon={faMagnifyingGlass} /></i> 
-                                <input type="text" placeholder="Search.." name="search"/>
-                            </form>
-                            </div>
-                        <div className='profile'>
-                        <p>Registered</p>
-                        <div className='profile-img'>
-                            <img src={profilepic} alt="profile"/>
-                            </div>
-                            <div className='icon'>
-                            <FontAwesomeIcon icon={faBell} size = '2x'/>
-                            </div>
-                        </div>
-                        </div>
                     <div className='content'>
                         <div className='head'>
                         <h1 className='title-head'>favorites</h1>
