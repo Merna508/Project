@@ -2,8 +2,8 @@ import { faHouse, faBookmark, faMessage, faUser, faCalendarCheck, faArrowRightFr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './Sidebar.css';
-// import home from '../icons/home.svg'
 function Sidebar(){
     const [show, setShow] = useState(true);
     return(
@@ -27,24 +27,24 @@ function Sidebar(){
                                 <i><FontAwesomeIcon icon={faBookmark} /></i>
                                 <Link to={'/favorites'} className="favorites">Favorites</Link>
                             </li>
-                            <li className='gap'>
+                            <li className='Gap'>
                                <i><FontAwesomeIcon icon={faMessage} /></i>
                                 <Link to={'/chat'} className="chat">Chat</Link>
                             </li>
-                            <li className='gap'>
+                            <li className='Gap'>
                                 <i><FontAwesomeIcon icon={faUser} /></i>
                                 <Link to={'/about'} className="about">About</Link>
                             </li>
                             <li>
                                <i><FontAwesomeIcon icon={faCalendarCheck} /></i>
-                                <Link to={'/contact'} className="contact">Contact Us</Link>
+                                <Link to={'/contact'} className="Contact">Contact Us</Link>
                             </li>
                         </ul>
                     </div>
-                    <div className='btn'>
+                    <div className='Logbtn'>
                         <button>
                             <i><FontAwesomeIcon icon={faArrowRightFromBracket} /></i>
-                            Logout
+                            <Link to={'/Login'} className='log'>Logout</Link>
                         </button>
                     </div>
                 </div>

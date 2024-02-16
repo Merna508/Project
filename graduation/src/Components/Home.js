@@ -1,4 +1,4 @@
-import { faBookmark, faMessage, faEllipsisVertical, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faMessage, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';

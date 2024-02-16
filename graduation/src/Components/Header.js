@@ -1,5 +1,6 @@
 import './Header.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import {faMagnifyingGlass, faBell} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Alex from '../images/Alex.jfif';
@@ -12,6 +13,18 @@ function Header(){
       function Notify(){
           setShow(!show)
       } 
+      const [data,setData]=useState([]);
+      const [records,setRecords]=useState([]);
+      useEffect(()=>{
+        axios.get("http://localhost:8000/").then(res=> {
+            setData(res.data)
+            setRecords(res.data);
+        })
+        .catch(err => console.log(err));
+      },[])
+      const Filter =(event) =>{
+        setRecords(data.filter(f => f.name.toLowerCase().includes(event.target.value)))
+      }
    return(
     <div className='header'>
     <div className='search'>
@@ -20,7 +33,8 @@ function Header(){
                     <i className='magnifier'><FontAwesomeIcon icon={faMagnifyingGlass} /></i> 
                    <p className='place'>search..</p>
                    </div>
-                <input type="text" className='srch-input' name="search"/>
+                <input type="text" className='srch-input' name="search" onChange={Filter}/>
+                {/* {records.map((d))} */}
             </form>
             </div>
             <div className='profile'>
@@ -28,7 +42,7 @@ function Header(){
                             <div className='profile-img'>
                                 <img src={profilepic} alt="profile" />
                             </div>
-                            <div className='icon'>
+                            <div className='icon1'>
                                 <i style={{color:'#787486'}} onClick={Notify}><FontAwesomeIcon icon={faBell} size='2x' /></i>
                                 <div className='circle'>34</div>
                                 {show ? <div className='notification' style={{backgroundColor:'#fff',width:410,height: 900,position:'absolute',display:'block',zIndex:'1',right:-82,top:35,borderRadius:10,boxShadow:' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19)',}}>
