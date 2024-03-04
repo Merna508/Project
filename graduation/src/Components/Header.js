@@ -13,18 +13,18 @@ function Header(){
       function Notify(){
           setShow(!show)
       } 
-      const [data,setData]=useState([]);
-      const [records,setRecords]=useState([]);
-      useEffect(()=>{
-        axios.get("http://localhost:8000/").then(res=> {
-            setData(res.data)
-            setRecords(res.data);
-        })
-        .catch(err => console.log(err));
-      },[])
-      const Filter =(event) =>{
-        setRecords(data.filter(f => f.name.toLowerCase().includes(event.target.value)))
-      }
+      //search 
+    //   const [data,setData]=useState([]);
+    //   const [records,setRecords]=useState([]);
+    //   useEffect(()=>{
+    //     axios.get("http://localhost:8000/").then(res=> {
+    //         setData(res.data)
+    //         setRecords(res.data);
+    //     })
+    //     .catch(err => console.log(err));
+    //   },[])
+    //   const Filter =(event) =>{
+    //     setRecords(data.filter(f => f.name.toLowerCase().includes(event.target.value)))
    return(
     <div className='header'>
     <div className='search'>
@@ -33,7 +33,7 @@ function Header(){
                     <i className='magnifier'><FontAwesomeIcon icon={faMagnifyingGlass} /></i> 
                    <p className='place'>search..</p>
                    </div>
-                <input type="text" className='srch-input' name="search" onChange={Filter}/>
+                <input type="text" className='srch-input' name="search"/>
                 {/* {records.map((d))} */}
             </form>
             </div>
@@ -139,7 +139,6 @@ function Header(){
                                     </div>
                                 </div> : null}
                             </div>  
-                            <div className='clear'></div>
                         </div>
                     </div>
             

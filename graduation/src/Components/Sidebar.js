@@ -29,7 +29,7 @@ function Sidebar(){
                             </li>
                             <li className='Gap'>
                                <i><FontAwesomeIcon icon={faMessage} /></i>
-                                <Link to={'/chat'} className="chat">Chat</Link>
+                                <Link to={'/Forget_pass'} className="chat">Chat</Link>
                             </li>
                             <li className='Gap'>
                                 <i><FontAwesomeIcon icon={faUser} /></i>
@@ -37,7 +37,7 @@ function Sidebar(){
                             </li>
                             <li>
                                <i><FontAwesomeIcon icon={faCalendarCheck} /></i>
-                                <Link to={'/contact'} className="Contact">Contact Us</Link>
+                                <Link to={'/contactus'} className="Contact">Contact Us</Link>
                             </li>
                         </ul>
                     </div>

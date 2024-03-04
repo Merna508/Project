@@ -4,7 +4,6 @@ import Home from './Components/Home';
 import Favorites from './Components/Favorites';
 import ContactUs from './Components/ContactUs';
 import About from './Components/About';
-
 function App() {
   return (
     <div className="App">
