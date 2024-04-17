@@ -1,0 +1,100 @@
+
+.login{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.img{
+    background-image: url(./Group\ 1171274959.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    text-align: center;
+}
+
+.img .x{
+    position: relative;
+    top: 30px;
+    left: -30%;
+    font-weight: 600;
+    color: #f0f8ff;
+}
+.img .x .s{
+    color: rgb(230, 155, 63);
+    font-weight: 700;
+}
+
+.img .box_div{
+    color: #f0f8ff;
+    line-height: 17px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.img .box_div span{
+    font-size: 12px;
+}
+.img .box_div .span{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.img img{
+    width: 70%;
+    height: 70%;
+    margin: 10px 0 0 0;
+}
+.forms{
+    width: 50%;
+}
+.forms .div_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;  
+    width: 100%;
+}
+.forms div form{
+    display: flex;
+    flex-direction: column;
+}
+.forms div form input{
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 1px solid #777;
+    outline: none;
+    background-color: aliceblue;
+    padding: 5px 7px;
+    
+}
+.forms div span{
+    color: #777;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.forms .div_form form span{
+    color: blue;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: end;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    float: right;
+    margin: -20px 0 0 ;
+}
+.forms div form button{
+    background-color: blue;
+    border: 0;
+    padding: 8px 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 12px;
+    cursor:pointer;
+}
+
+
+
+

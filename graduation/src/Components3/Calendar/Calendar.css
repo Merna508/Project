@@ -1,0 +1,380 @@
+.Calendar{
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    transition: right 0.5s ease;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.Calendar .p {
+    color: black;
+    margin: 5px 0 -40px 5px;
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.Calendar .p:hover{
+    background-color: rgb(225, 228, 228);
+    cursor: pointer;
+    display: block;
+    color: blueviolet;
+} 
+.Calendar .Week {
+    color: #777;
+    font-size: 13px;
+}
+
+.Calendar .Week .date_time{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 10px;
+    color: white;
+}
+
+.Calendar .Week .date_time .time .icon{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 17px;
+}
+.Calendar .Week .date_time .time .icon span{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+}
+.Calendar .Week .date_time .time .icon span:hover{
+    color: black;
+    background-color: rgb(225, 228, 228);
+    cursor: pointer;
+    display: block;
+}
+
+.Calendar .Week .date_time .date p,
+.Calendar .Week .date_time .time p{
+    width: 20px;
+    margin: 5px;
+    padding: 2 10px;
+    color: black;
+    text-align: center;
+    color: blue;
+    font-size: 17px;
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19); */
+
+}
+
+.Calendar .Week .date_time .date p{
+    width: fit-content;
+    width: 80px;
+    letter-spacing: 1.1px;
+}
+
+.Calendar .Week .date_time .time span{
+    color: #777;
+    font-size: 20px;
+}
+
+.Calendar .Week p{
+    width: calc(100% / 7);
+    display: inline-block;
+    text-align: center;
+}
+
+.Calendar .Week .day{
+    display: inline-block;
+    width: 100%;
+}
+.Calendar .Week .day p{
+    width: calc(100% / 7);
+    display: inline-block;
+}
+.Calendar .Days{
+    display: flex;
+}
+.Calendar .Days p{
+    margin-right: 7px;
+}
+
+.Calendar .Week .box{
+    height: 248px;
+}
+.Calendar .Week p.activ{
+    color: blue;
+    border-radius: 3px;
+    font-size: 17px;
+}
+.Calendar .Week p.noactiv:hover{
+    border: 1px solid blue;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.Calendar .Week .activs{
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 13.571px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
+}
+
+.Calendar .Week .Lectures{
+    font-size: 12px;
+    display: flex;
+    padding:0 5px;
+    overflow: hidden;
+}
+.Calendar .Week .Todays_Lectures{
+    color: #777;
+    font-size: 12PX;
+    padding: 2PX 5PX;
+    position: relative;
+    /* right: 0; */
+    bottom: 10px;
+    width: 100%;
+}
+
+.Calendar .Week .Todays_Lectures span:first-child,
+.Calendar .Week .Todays_Lectures span:last-child{
+    color: blue;
+    font-size: 12PX;
+    padding: 2PX 5PX;
+    width: fit-content;
+    text-align: end;
+    position: relative;
+    top: 0px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.Calendar .Week .Todays_Lectures span:first-child:hover,
+.Calendar .Week .Todays_Lectures span:last-child:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+.Calendar .Week .Lectures .div{
+    position: absolute;
+    z-index: 5;
+    background-color: red;
+    width: calc(100% - 5px);
+    height: 2px;
+}
+.Calendar .Week .Lectures .div .span{
+    height: 16px;
+    background-color: red;
+    width: 40px;
+    display: block;
+    float: right;
+    margin-top: -7px;
+    margin-right: 7px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    line-height: 16px;
+    font-size: 9px;
+}
+.Calendar .Week .Lectures .hours_Lectures{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    padding: 0;
+    width: 30px;
+    color: black;
+}
+.Calendar .Week .Lectures .hours_Lectures span{
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid blue;
+    height: 60px;
+    line-height: 60px;
+    font-size: 10px;
+    color: #777;
+}
+.Calendar .Week .Lectures div{
+    width: calc(100%);
+    position: relative;
+
+}
+.Calendar .Week .Lectures div .Lectures_active{
+    background-color: rgb(36, 222, 36);
+    color: white;
+}
+.Calendar .Week .Lectures .Lectures_noactive{
+    background-color: white;
+    color: black;
+}
+.Calendar .Week .Lectures .Lectures_active,
+.Calendar .Week .Lectures .Lectures_noactive{
+    border:  1px solid blue;
+    position: absolute;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #eeeaea;
+}
+.Calendar .Week .Lectures .Lectures_noactive p,
+.Calendar .Week .Lectures .Lectures_active p{
+    width: 100px;
+}
+.Calendar .Week .Lectures img{
+    width: 30px;
+    height: 30;
+    border-radius: 50%;
+}
+.Calendar .Week .Open{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px 25px;
+}
+.Calendar .Week .Open div{
+  background-color: rgba(137, 43, 226, 0.122);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 7px;
+}
+.Calendar .Week .Open p{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: blueviolet;
+    font-size: 15px;
+}
+.Calendar .Week .Open .m{
+    width: 100%;
+    justify-content: space-between;
+    color: #777;
+    font-size: 13px;
+}
+.Calendar .Week .Open a{
+    width: 100%;
+    background-color: blueviolet;
+    display: block;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.Calendar .curent2,
+.Calendar .curent{
+    position: fixed;
+    top: 150px;
+    right: 35%;
+    width: 30%;
+    background-color: white;
+    z-index: 5;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.Calendar .curent2 div,
+.Calendar .curent div{
+    display: flex;
+    justify-content: space-between;
+}
+.Calendar .curent div i:first-child{
+    color: blueviolet;
+    font-size: 25px;
+
+}
+.Calendar .curent2 div i{
+    margin-bottom: 20px;
+}
+.Calendar .curent2 div i{
+    float: right;
+    text-align: end;
+}
+.Calendar .curent2 div i,
+.Calendar .curent div i:last-child{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.Calendar .curent2 div i:hover,
+.Calendar .curent div i:last-child:hover{
+    color: blueviolet;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(241, 244, 241);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.Calendar .curent2 p,
+.Calendar .curent p{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: #777;
+    font-size: 12px;
+
+}
+.Calendar .curent2 p span{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgb(234, 233, 233);
+    border-radius: 3px;
+    border: 1px solid blueviolet;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+.Calendar .curent2 a,
+.Calendar .curent button{
+    outline: none;
+    border: 0;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    padding: 0 20px;
+    text-decoration:none ;
+    margin-top: 20px;
+}
+/* .Calendar .curent2 a:hover, */
+.Calendar .curent button:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+

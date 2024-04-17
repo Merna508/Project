@@ -3,44 +3,59 @@
     margin: 0;
     box-sizing: border-box;
 }
-.contact{
-    width: 100%;
-    height: 100vh;
+.ContactUs{
+    width: 90%;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    padding: 20px;
 }
-.inputs{
-    border: 3px solid #7413D6 ;
-
-    }
-.submitBtn{
+/* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19); */
+.ContactUs .contact label{
+    color: #777;
+}
+.ContactUs .contact .inputs{
+    border: 2px solid #7413D6 ;
+}
+.ContactUs .contact .submitBtn{
     background-color: #7413D6;
     color: white;
     font-weight: 600;
 }
-.submitBtn:hover{
-    background-color: #7413D6;
-    color: white;
+.ContactUs .contact .submitBtn{
+    outline: none;
 }
-.icons{
+.ContactUs .contact .icons{
     background-color: #F9F6FF;
     padding: 8px 5px;
     width: 180px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    box-shadow: -3px 3px 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
 }
-.icon{
+.ContactUs .contact .icon{
     background-color: #5d3464;
     color: white;
 }
-.title{
+.ContactUs .contact .title{
     color:#7413D6;
     font: Poppins;
     font-weight: 700;
 }
-.formImage{
+.ContactUs .contact .imageForm div .formImage{
     width: 90%;
     height: 550px;
 }
-.iconInfo{
+.ContactUs .contact .imageForm i{
+    color: #777;
+}
+.ContactUs .contact .imageForm span{
     color: #7413D6;
+    color: #777;
+}
+
+.form-control {
+    background-color: #7413D6;
+    bottom: 1px sol;
 }

@@ -1,0 +1,114 @@
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+
+.Project_details{
+    padding: 5px 20px;
+    border-left: 2px solid var(--dataColor);
+    width: 100%;
+    /* height: 100vh; */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.Project_details .box_d h1{
+    font-size: var(--fontSize1);
+    font-weight: 700;
+    margin: 10px 0;
+    color: #000000;
+
+}
+.Project_details .box_d p{
+    max-width: 230px;
+    font-size: var(--fontSize4);
+    font-weight: 400;
+    color: #17183B;
+    margin-bottom: 5px;
+}
+.Project_details .box_data h2{
+    font-weight: 700;
+    font-size: var(--fontSize3);
+    margin-bottom: 5px;
+    margin-left: -3px;
+    width: 200px;
+    color: #000000;
+}
+.Project_details .box_data span{
+    font-weight: 500;
+    font-size: var(--fontSize3);
+    display: block;
+    padding: 2px 0;
+    color: var(--dataColor);
+    width: 100px;
+}
+.Project_details .x{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.Project_details .x span{
+    font-size: 
+    var(--fontSize3);
+    color: #000000;
+    font-weight: 500;
+}
+.Project_details .x div span {
+    color: var(--dataColor);
+
+}
+.Project_details .x div i {
+    margin-right: var(--fontSize3);
+    cursor: pointer;
+
+}
+
+.Project_details .container_input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+    font-size: var(--fontSize3);
+}
+.Project_details .container_input div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.Project_details .container_input img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+.Project_details .container_input input{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    border: 0;
+    border: 1px solid var(--projectColor);
+    margin: 0 5px;
+}
+.Project_details .icon5{
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    text-align: center;
+    line-height: 100%;
+    cursor: pointer;
+    padding-top: 10px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 30px;
+}

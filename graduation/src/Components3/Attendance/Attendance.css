@@ -1,0 +1,292 @@
+.Attendance{
+    width: 85%;
+    position: absolute;
+    right: 0;
+}
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+.Attendance .search{
+    display: flex;
+    padding: 15px 10px 0;
+    background-color: hwb(0 91% 9%);
+    position: fixed;
+    width: 190vh;
+    z-index: 2;
+    height: 65px;
+    align-items: center;
+}
+
+
+.Attendance .search div:first-child{
+    width: 50%;
+}
+.Attendance .search div:first-child h3{
+    font-size: var(--fontSize1);
+    color: var(--borderColor);
+
+}
+.Attendance .search div:first-child p{
+    font-size: var(--fontSize3);
+    color: var(--projectColor);
+}
+
+.Attendance .search div:last-child{
+    width: 50%;
+    margin: auto;
+}
+.Attendance .search div:last-child div{
+    background-color: white;
+    width: 50%;
+    border: 1px solid var(--dataColor);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 6px;
+    
+}
+.Attendance .search div:last-child div i{
+    color: var(--projectColor);
+    font-size: var(--fontSize2);
+    padding-right: 7px;
+}
+.Attendance .search div:last-child div input{
+    font-size: var(--fontSize3);
+    outline: none;
+    border: 0;
+    width: 100%;
+}
+
+/* header */
+.Attendance .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    color: var(--borderColor);
+    font-size: var(--fontSize3);
+    position: fixed;
+    top: 65px;
+    background-color: hwb(0 91% 9%);
+    width: 190vh;
+    z-index: 3;
+}
+.Attendance .header .box,
+.Attendance .header p{
+    margin: 0;
+}
+.Attendance .header p span{
+    color: var(--projectColor);
+    font-size: var(--fontSize2);
+    font-weight: 700;
+}
+
+.Attendance .header .box{
+    display: flex;
+    flex-direction: column;
+}
+.Attendance .header .box .level{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.Attendance .header .box .level p{
+    color: var(--borderColor);
+    display: flex;
+    width: 100px;
+}
+.Attendance .header .box .level p span{
+    display: flex;
+    color: black;
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: var(--fontSize2);
+}
+.Attendance .header .box .level i{
+    margin-left: -30px;
+    color: var(--borderColor);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: var(--fontSize2);
+    /* transform: rotate(80deg); */
+}
+.Attendance .header .box .level i:hover{
+    cursor: pointer;
+    background-color: rgb(195, 192, 192);
+    color: black;
+}
+
+.Attendance .header .box .levels{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 35px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.Attendance .header .box .levels p{
+    background-color: rgba(137, 43, 226, 0);
+    width: 100%;
+    color: var(--borderColor);
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: var(--fontSize3);
+    border-bottom: 1px solid var(--projectColor);
+    z-index: 2;
+    padding: 0 5px;
+
+}
+
+.Attendance .header .box .levels p:hover{
+    background-color: var(--projectColor);
+    color: white;
+    cursor: pointer;
+}
+
+/* Lactrecs */
+.Attendance .Lactrecs{
+}
+.Attendance .Lactrecs .name{
+    display: flex;
+
+}
+.Attendance .Lactrecs .name p{
+    color: var(--borderColor);
+    width: 25.5%;
+    position: fixed;
+    top: 105px;
+    text-align: center;
+    z-index: 2;
+    background-color: white;
+
+}
+.Attendance .Lactrecs .name div{
+    position: fixed;
+    left: 40.5%;    
+    top: 105px;
+    width: 60%;
+    background-color: white;
+    z-index: 2;
+    
+}
+.Attendance .Lactrecs .name div span{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: var(--borderColor);
+    padding: 0 15px;
+  
+
+
+}
+.Attendance .Lactrecs .name div span span{
+    width: 80px;
+    margin: 0;
+    text-align: center;
+}
+
+.Attendance .Lactrecs .allStudent .all{
+    display: flex;
+}
+.Attendance .Lactrecs .allStudent .image{
+    display: flex;
+    width: 30%;
+    top: 134px;
+    background-color: rgb(231, 223, 223);
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 0 3px 0 5px;
+    font-size: var(--fontSize2);
+}
+.Attendance .Lactrecs .allStudent .image img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.Attendance .Lactrecs .allStudent .all .allLactrecs{
+    position: relative;
+    top: 134px;
+    width: 70%;
+}
+.Attendance .Lactrecs .allStudent .all .allLactrecs span{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(231, 223, 223);
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.Attendance .Lactrecs .allStudent .all .allLactrecs span span{
+    background-color: #13d634;
+    width: 80px;
+    height: 30px;
+    margin: 0;
+    border-radius: 5px;
+    font-size: var(--fontSize3);
+}
+
+.Attendance .Showing{
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 185.5vh;
+    justify-content: space-around;
+    height: 30px;
+    line-height: 30px;
+    color: var(--borderColor);
+}
+.Attendance .Showing div{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Attendance .Showing div span{
+    width: 30px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    border-radius: 3px;
+
+
+}
+.Attendance .Showing div span.active{
+    color: white;
+    border-radius: 3px;
+}
+
+.Attendance .Showing div i {
+    font-size: var(--fontSize3);
+    width: 20px;
+    text-align: center;
+}
+.Attendance .Showing div i:hover {
+    color: black;
+    cursor: pointer;
+}
+
+
+

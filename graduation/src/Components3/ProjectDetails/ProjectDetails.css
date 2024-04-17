@@ -1,0 +1,367 @@
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ProjectDetails{
+    position: absolute;
+    right: 0;
+    width: 90%;
+    display: flex;
+}
+.ProjectDetails .op{
+    background-color: #cbc9c9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 50%;
+}
+.ProjectDetails .projectss{
+    width: 35%;
+    margin: 0;
+    margin-top: 60px;
+}
+.ProjectDetails .projectss .container{
+    width: 35%;
+    margin: 0;
+}
+.ProjectDetails .projectss .project{
+    width: 100%;
+    background-color: rgb(243, 240, 240);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 5px;
+    color: var(--borderColor);
+    font-size: var(--fontSize3);
+    cursor: pointer;
+}
+.ProjectDetails .projectss .project.active{
+    background-color: var(--projectColor);
+    color: white;
+}
+.ProjectDetails .projectss .project:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.ProjectDetails .projectss .project img{
+    width: 35%;
+    height: 100px;
+    border-radius: 10px;
+
+}
+.ProjectDetails .projectss .project .container{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.ProjectDetails .projectss .project .container .name{
+    width: 100%;
+}
+.ProjectDetails .projectss .project .container .name p{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.ProjectDetails .projectss .project .container .name .p{
+    color: black;
+    font-size: var(--fontSize2);
+
+}
+
+.ProjectDetails .projectss .project .container .time p{
+    float: right;
+}
+
+.ProjectDetails .evaluation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 60px);
+    overflow: scroll;
+    overflow-y: scroll;
+    right: 0;
+    position: fixed;
+    right: 0;
+    width:  55%;
+    margin-top: 70px;
+
+}
+.ProjectDetails .evaluation img{
+    width: 60%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.ProjectDetails .evaluation div{
+    width: 40%;
+    display: flex;
+}
+.ProjectDetails .evaluation div .img2{
+    width: 15%;
+    height: 40px;
+    margin: 2.5%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.ProjectDetails .evaluation div .img2:hover{
+    border: 2px solid var(--projectColor);
+    box-sizing: border-box;
+}
+
+
+.ProjectDetails .evaluation .box{
+    width: 100%;
+
+}
+.ProjectDetails .evaluation .box .data{
+    width: 65%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+.ProjectDetails .evaluation .box .data div{
+    background-color: rgb(243, 240, 240);
+    margin: 5px;
+    border-radius: 5px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.ProjectDetails .evaluation .box .data div h2{
+    font-size: var(--fontSize1);
+    color: black;
+}
+.ProjectDetails .evaluation .box .data div p{
+    font-size: var(--fontSize3);
+    color: var(--borderColor);
+    margin: 0;
+    padding: 3px 0;
+}
+.ProjectDetails .evaluation .box .data div p span{
+    font-size: var(--fontSize3);
+    color: var(--projectColor);
+}
+.ProjectDetails .evaluation .box .Assignments{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProjectDetails .evaluation .box .Assignments div{
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    color: var(--borderColor);
+    font-size: var(--fontSize3);
+}
+/* .ProjectDetails .evaluation .box .Assignments .div1{
+    cursor: pointer;
+} */
+.ProjectDetails .evaluation .box .Assignments .div1:hover{
+    cursor: pointer;
+    background-color: var(--projectColor);
+    color: white;
+    a{
+        color: white;
+    }
+}
+.ProjectDetails .evaluation .box .Assignments .div1 img{
+    cursor: pointer;
+    border: 0;
+    width: 30px;
+    height: 40px;
+    margin-right: 3px;
+
+}
+.ProjectDetails .evaluation .box .Assignments .div1 a{
+    text-decoration: none;
+    font-size: var(--fontSize3);
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.ProjectDetails .evaluation .box .Assignments .div1,
+.ProjectDetails .evaluation .box .Assignments .div2{
+    display: flex;
+    align-items: center;
+    background-color: rgb(243, 240, 240);
+    border-radius: 5px;
+    border: 1px solid var(--projectColor);
+    color: black;
+
+}
+.ProjectDetails .evaluation .box .Assignments .div2 img{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   margin-right: 3px;
+}
+
+.ProjectDetails .evaluation .box .Assignments .div3{
+    display: flex;
+    flex-direction: column;
+}
+.ProjectDetails .evaluation .box .Assignments .div3 i{
+    color: #7413d68c;
+    margin-right: 10px;
+}
+.ProjectDetails .evaluation .box .Assignments .div3 h2{
+    font-size: var(--fontSize1);
+    color: black;
+}
+.ProjectDetails .evaluation .box .Assignments button{
+    color: white;
+    background-color: var(--projectColor);
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: var(--fontSize2);
+}
+.ProjectDetails .evaluation .box .Assignments button:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.ProjectDetails .assess{
+    position: fixed;
+    flex-direction: column;
+    right: 30%;
+    top: 80px;
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    z-index: 5;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: auto;
+}
+.ProjectDetails .assess .head{
+    color: var(--borderColor);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 40px;
+    margin: 0;
+}
+.ProjectDetails .assess .head span{
+    margin: 0;
+}
+.ProjectDetails .assess .head .span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: var(--fontSize1);
+    color: black;
+    z-index: 7;
+}
+.ProjectDetails .assess .head .span:hover{
+    background-color: #cbc9c9;
+    cursor: pointer;
+    color: var(--projectColor);
+}
+.ProjectDetails .assess .content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.ProjectDetails .assess .content div {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+
+}
+.ProjectDetails .assess .content div .range{
+    width: calc(100% / 10);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.ProjectDetails .assess .content div .range span{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    font-size: var(--fontSize2);
+    color: var(--borderColor);
+    cursor: pointer;
+    display: block;
+    background-color: #cbc9c9;
+    
+}
+.ProjectDetails .assess .content div .range .active,
+.ProjectDetails .assess .content div .range span:hover{
+    background-color: var(--projectColor);
+    color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    width: 50px;
+    height: 33px;
+    line-height: 33px;
+}
+
+.ProjectDetails .assess .content textarea,
+.ProjectDetails .assess .content p{
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-size: var(--fontSize2);
+    margin: 5px 0;
+}
+.ProjectDetails .assess .content p{
+    color: var(--borderColor);
+}
+.ProjectDetails .assess .content p span{
+    color: var(--projectColor);
+}
+.ProjectDetails .assess .content .p{
+    text-align: start;
+    color: var(--borderColor);
+    font-size: var(--fontSize3);
+    margin: 0;
+}
+.ProjectDetails .assess .content textarea{
+    outline: none;
+    border: 0;
+    border: 1px solid var(--projectColor);
+    text-align: start;
+    border-radius: 5px;
+    height: 80px;
+    font-size: var(--fontSize2);
+    padding: 0 4px;
+}
+.ProjectDetails .assess .content button{
+    outline: none;
+    border: 0;
+    border-radius: 20px;
+    background-color: var(--projectColor);
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    color: white;
+    display: flex;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}

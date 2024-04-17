@@ -1,0 +1,209 @@
+:root {
+  --colorMain: #7413d6;
+}
+.ProjectsSt {
+  position: absolute;
+  right: 0;
+  width: 90%;
+}
+.ProjectsSt .Sent_projects {
+  width: 100%;
+  margin-top: 60px;
+}
+.ProjectsSt .Sent_projects h1 {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+.ProjectsSt .Sent_projects .content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3%;
+  padding-right: 10px;
+}
+.ProjectsSt .Sent_projects .content .content_box {
+  display: flex;
+}
+.ProjectsSt .Sent_projects .content .content_box p {
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px 13px;
+  font-size: 15px;
+  font-weight: 500;
+  color: blueviolet;
+  /* margin: 0; */
+  padding: 0;
+}
+.ProjectsSt .Sent_projects .content .content_level {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  line-height: 150%;
+  border-radius: 5px;
+  padding: 20px 15px;
+  border: 1px solid #777;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #ffffff;
+  margin-right: 30px;
+}
+.ProjectsSt .Sent_projects .content .content_level p {
+  color: #777;
+}
+.ProjectsSt .Sent_projects .content .content_level p span {
+  color: black;
+  font-weight: 600;
+}
+.ProjectsSt .Sent_projects .content .content_level i {
+  transform: rotate(270deg);
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+  margin-left: 20px;
+}
+.container {
+  display: flex;
+}
+.ProjectsSt .container .container_projects {
+  width: 65%;
+  margin-left: 2%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px #d0cfcf;
+  display: inline-block;
+  padding: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.ProjectsSt .container .container_projects .box{
+  width: 45%;
+  height: 120px;
+  background-color: #FFFFFF;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 3px 2px 1px #d0cfcf;
+  border-radius: 5px;
+  padding: 13px;
+  /* border-top: 2px solid; */
+  border-top-width: 2px;
+  border-top: solid;
+  position: relative;
+
+}
+.ProjectsSt .container .container_projects .box div{
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  bottom: -30px;
+  margin: 0px 10px 0 -13px;
+  box-shadow: 0 3px 2px 1px #d0cfcf;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 5px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 0;
+}
+.ProjectsSt .container .container_projects .box div span{
+  color: #fff;
+  cursor: pointer;
+}
+.ProjectsSt .container .container_projects .box div .ic{
+  width: 1px;
+  height: 100%;
+  display: block;
+  background-color: #777;
+  cursor: auto;
+
+
+}
+.ProjectsSt .container .container_projects .box i{
+  font-size: 15px;
+  color: #777;
+  float: right;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+}
+.ProjectsSt .container .container_projects .box i:hover{
+  background-color: #e7e6e6;
+  color: #7413d6;
+}
+.ProjectsSt .container .container_projects .box .h2{
+  color: #7413d6;
+  font-size: 15px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-bottom: 0;
+  display: flex;
+
+}
+.ProjectsSt .container .container_projects .box .p{
+  color: #777;
+  font-size: 10px;
+  width: fit-content;
+  height: 52px;
+  display: flex;
+  display: block;
+  position: relative;
+  background-color: blue;
+
+
+}
+.ProjectsSt .container .container_add {
+  width: 30%;
+}
+.ProjectsSt .container .container_add .add {
+  width: 80%;
+  height: 60px;
+  background-color: var(--colorMain);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.ProjectsSt .container .container_add .add button {
+  font-size: 25px;
+  color: white;
+  margin-right: 8px;
+  background-color: #b378ff;
+  font-weight: 500;
+  outline: none;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  line-height: 30px;
+
+}
+.ProjectsSt .container .container_add .text {
+  width: 80%;
+  margin: auto;
+  background-color: #e4d7ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.ProjectsSt .container .container_add .text span {
+  color: var(--colorMain);
+  font-size: 12px;
+  font-weight: 500;
+}
+.ProjectsSt .container .container_add .text p {
+  color: #777;
+  font-weight: 400;
+  font-size: 10px;
+  padding-top: 5px;
+}

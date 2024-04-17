@@ -1,0 +1,11 @@
+.Chat{
+    width: 90%;
+    position: absolute;
+    right: 0;
+    /* background-color: rgb(42, 165, 159); */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

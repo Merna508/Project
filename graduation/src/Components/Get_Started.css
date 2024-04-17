@@ -1,3 +1,96 @@
+.Get_Started{
+    width: 100%;
+    padding: 15px;
+    background-image: url("../images/getstartedback.jpeg");
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+
+.contact{
+    display: flex;
+}
+.contact .div_contact{
+    width: 50%;
+}
+.contact .div_contact h3{
+    color: white;
+    font-size: var(--fontSize2);
+    font-weight: 600;
+    margin: 10px 30px;
+
+}
+.contact .div_contact h3 span{
+    color: rgb(241, 140, 68);
+    font-weight: 700;
+}
+.contact .div_contact div{
+    margin-top: 100px;
+}
+.contact .div_contact h2{
+    color: white;
+    font-size: var(--fontSize1);
+    font-weight: 600;
+}
+.contact .div_contact p{
+    color: white;
+    font-size: var(--fontSize3);
+    font-weight: 400;
+    line-height: 15px;
+    margin-top: 20px;
+    width: 70%;
+}
+.contact .div_contact button{
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 50px ;
+    background-color:#FFD054 ;
+    font-size: var(--fontSize3);
+    font-weight: 400;
+
+}
+.contact .imageForm{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.contact .imageForm img{
+    width: 100%;
+}
+.contact .imageForm .GoTo_Login{
+    text-align: center;
+    margin: 10px 30px;
+    padding: 2px 8px;
+    color: white;
+    border: 1px solid white;
+    width: 70px;
+    border-radius: 5px;
+    float: right;
+}
+.contact .imageForm span:hover{
+    cursor: pointer;
+    box-shadow: 0 1px 1px 1px #c5c3c3;
+
+}
+
+
+
+
+
+/* 
 .formImage{
     width: 90%;
     height: 600px;
@@ -32,4 +125,4 @@
 .back{
     height: 100vh;
     background-color: #7413D6;
-}
+} */

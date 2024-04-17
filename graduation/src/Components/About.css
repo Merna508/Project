@@ -1,0 +1,74 @@
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+.about{
+    width: 90%;
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    text-align: center;
+    /* margin: auto; */
+}
+.about p{
+    font-size: var(--fontSize1);
+    color: var(--borderColor);
+    font-weight: 600;
+    padding: 0 20px;
+    text-align: start;
+}
+.about .box{
+    width: 100%;
+}
+.about .box .image{
+    background-color: white;
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+}
+.about .box .image:hover{
+    background-color: #ccc7c767;
+    cursor: pointer;
+    i{
+        background-color: var(--projectColor);
+    }
+}
+.about .box .image img{
+    width: 100%;
+    height: 160px;
+}
+.about .box .image .span{
+    color: var(--dataColor);
+    font-size: var(--fontSize2);
+    padding: 5px 10px;
+}
+.about .box .image .p{
+    color: var(--borderColor);
+    font-size: var(--fontSize4);
+}
+.about .box .image i{
+    transform: rotate(20deg);
+    background-color: var(--borderColor);
+    border-radius: 50%;
+    font-size: var(--fontSize2);
+    cursor: pointer;
+    color: white;
+    padding: 2px 5px;
+    /* width: 50px;
+    height: 50px;
+    display: block; */
+}
+/* .about .box .image i:hover{
+    width: 30px;
+    background-color: #13d62d;
+} */

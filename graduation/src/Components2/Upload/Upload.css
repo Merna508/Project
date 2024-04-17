@@ -1,0 +1,250 @@
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+.Upload{
+    width: 90%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    margin: 0;
+
+}
+.Upload .container{
+    display: flex;
+    align-items: start;
+    height: 100vh;
+    padding-top: 20px;
+    margin: 0;
+
+}
+.Upload .Add_project{
+    width: 50%;
+    height: 100%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Upload .Add_project h3{
+    font-size: var(--fontSize1);
+    text-align: end;
+}
+/* .Upload .Add_project .error{
+    background-color: #7513D6;
+} */
+.Upload .Add_project .error,
+.Upload .project_data .error{
+    background-color: rgb(251, 208, 209);
+    z-index: 2;
+    /* display:block; */
+    margin-bottom: 6px;
+    text-align: center;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    color: red;
+  }
+  .Upload .Add_project .error::before,
+    .Upload .project_data .error:before{
+    content:'' ;
+    position: absolute;
+    bottom: -15px;
+    left: 40%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(251, 208, 209) transparent transparent transparent;
+    
+  }
+.Upload .Add_project .add{
+    width: 50%;
+    /* background-color: aqua; */
+    height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px dashed rgb(231, 33, 165);
+    padding: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+.Upload .Add_project .add i {
+    font-size: 30px;
+    color: rgb(231, 33, 165);
+}
+.Upload .Add_project .add span {
+    margin-top: 7px;
+    display: block;
+}
+.Upload .Add_project .add p{
+    font-size: var(--fontSize3);
+    width: 40%;
+    margin: auto;
+    cursor: pointer;
+}
+.Upload .Add_project .add .span{
+    font-size: var(--fontSize3);
+    width: 40%;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+    margin-top: 6px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(231, 33, 165);
+    color: white;
+}
+.Upload .Add_project .add img{
+    width: 30%;
+    height: 60px;
+    margin: 3px;
+    /* margin-top: 10px; */
+    display: inline-block;
+    border-radius: 5px;
+}
+.Upload .project_data{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Upload .project_data input,
+.Upload .project_data button,
+.Upload .project_data .box{
+    width: 70%;
+    margin: 10px 0;
+    padding: 0 3px;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    border: 1px solid rgb(231, 33, 165);
+    font-size: var(--fontSize3);
+    height: 40px;
+    line-height: 40px;
+}
+.Upload .project_data textarea{
+    width: 70%;
+    margin: 10px 0;
+    padding: 0 3px;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    border: 1px solid rgb(231, 33, 165);
+    font-size: var(--fontSize3);
+    height: 70px;
+    padding-top: -15px;
+}
+.Upload .project_data button{
+    width: 70%;
+    margin: 10px 0;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    border: 1px solid rgb(231, 33, 165);
+    font-size: var(--fontSize3);
+    height: 35px;
+    line-height: 35px;
+}
+
+.Upload .project_data button{
+    background-color:rgba(231, 33, 165, 0.64) ;
+    color: white;
+    font-size: var(--fontSize2);
+}
+.Upload .project_data button:hover{
+    background-color: rgb(231, 33, 165);
+}
+.Upload .project_data .box .heade{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0px 7px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    color: var(--borderColor);
+
+
+    
+
+}
+.Upload .project_data .box .heade i{
+    color: var(--borderColor);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.Upload .project_data .box .heade i:hover{
+    color: var(--borderColor);
+    color: var(--projectColor);
+}
+.Upload .project_data .box .heade i:hover{
+    cursor: pointer;
+}
+.Upload .project_data .box .header span{
+    color: #777;
+    font-size: var(--fontSize2);
+    z-index: 2;
+    display: block;
+}
+
+.Upload .project_data .box{
+    font-size: var(--fontSize3);
+    padding: 0;
+    
+}
+.Upload .project_data .box .cat{
+    padding: 5px 7px 0 10px;
+    margin-top: -1px;
+    background-color: rgb(241, 236, 236);
+    z-index: 3;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+
+    
+}
+.Upload .project_data .box .cat p{
+    line-height: 0.5;
+    padding: 7px;
+    margin: 0;
+}
+.Upload .project_data .box .cat p:hover{
+    background-color: rgb(231, 33, 165);
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.Upload .project_data .friends{
+    width: 70%;
+    margin: 10px 0;
+    padding: 0px 3px;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 33, 165);
+    font-size: var(--fontSize3);
+    display: flex;
+}
+.Upload .project_data .friends button{
+    padding: 5px 6px;
+    width: fit-content;
+    background-color: rgba(231, 33, 165, 0.64);
+    font-size: var(--fontSize1);
+    line-height: 100%;
+}
+.Upload .project_data .friends button:hover{
+    background-color: rgb(231, 33, 165);
+}
+.Upload .project_data .friends p{
+    color: var(--borderColor);
+    margin: auto 3px;
+}

@@ -1,0 +1,216 @@
+:root{
+    --projectColor: #7513D6;
+    --dataColor: #5443C3;
+    --borderColor: #777;
+
+    --fontSize1: 20px;
+    --fontSize2: 15px;
+    --fontSize3: 12px;
+    --fontSize4: 10px;
+}
+.portfolio{
+    width: 90%;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.portfolio .container{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.portfolio .container .name{
+    background-color: rgb(226, 225, 225);
+    width: 100%;
+    padding: 6%;
+    display: flex;
+
+}
+.portfolio .container .name .content{
+    width: 65%;
+}
+.portfolio .container .name .content h2{
+    color: var(--borderColor);
+    font-size: var(--fontSize1);
+    font-weight: 500;
+}
+.portfolio .container .name .content h3{
+    color: var(--projectColor);
+    font-size: var(--fontSize1);
+    font-weight: 500;
+}
+.portfolio .container .name .content p{
+    color: var(--borderColor);
+    font-size: var(--fontSize3);
+    font-weight: 300;
+    width: 70%;
+}
+.portfolio .container .name .content button{
+    outline: none;
+    font-size: var(--fontSize3);
+    color: white;
+    background-color: var(--projectColor);
+    border: 0;
+    border-radius: 3px;
+    padding: 3px 7px;
+    margin-top: 20px;
+}
+.portfolio .container .name .image{
+    width: 35%;
+
+}
+.portfolio .container .name .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+.portfolio .container .myServices{
+    background-color: white;
+    width: 100%;
+    padding: 40px 6%;        
+
+}
+.portfolio .container .myServices h3{
+    color: var(--borderColor);
+    padding: 0 6%;
+    font-size: var(--fontSize1);
+    text-align: center;
+    font-weight: 500;
+
+}
+.portfolio .container .myServices p{
+    color: var(--borderColor);
+    width: 60%;
+    font-size: var(--fontSize3);
+    text-align: center;
+    font-weight: 500;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.portfolio .container .myServices .box_Services{
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+.portfolio .container .myServices .box_Services img{
+    margin: 20px;
+    font-size: 50px;
+
+
+}
+.portfolio .container .myServices .box_Services h4{
+    font-size: var(--fontSize2);
+}
+.portfolio .container .myServices .box_Services p{
+    width: 100%;
+
+}
+
+
+
+.portfolio .container .Portfolio{
+    background-color: rgb(226, 225, 225);
+    width: 100%;
+    padding: 40px 6%; 
+}
+.portfolio .container .Portfolio h3{
+    color: var(--borderColor);
+    padding: 0 6%;
+    font-size: var(--fontSize1);
+    text-align: center;
+    font-weight: 500;
+}
+.portfolio .container .Portfolio p{
+    color: var(--borderColor);
+    width: 60%;
+    font-size: var(--fontSize3);
+    text-align: center;
+    font-weight: 500;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.portfolio .container .Portfolio .images{
+    background-color: #2914b0;
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+.portfolio .container .Portfolio .images img{
+    width: 100%;
+    border-radius: 5px;
+    height: 180px;
+}
+.portfolio .container .information{
+    background-color: white;
+    width: 100%;
+    padding: 40px 6%;  
+}
+.portfolio .container .information h3{
+    color: var(--borderColor);
+    padding: 0 6%;
+    font-size: var(--fontSize1);
+    text-align: center;
+    font-weight: 500;
+}
+.portfolio .container .information .div_content{
+    width: 100%;
+    margin-top: 30px;
+    color: var(--borderColor);
+    font-size: var(--fontSize3);
+
+}
+.portfolio .container .information .div_content .div1{
+    width: 45%;
+    display: inline-block;
+    padding: 20px;
+    margin-right: 10%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    
+
+
+}
+.portfolio .container .information .div_content .div1  p,
+.portfolio .container .information .div_content .div2  p,
+.portfolio .container .information .div_content .div3  p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px 5px;
+
+
+}
+.portfolio .container .information .div_content .div1 p span,
+.portfolio .container .information .div_content .div2 p span,
+.portfolio .container .information .div_content .div3 p span{
+    width: 50%;
+    text-align: start;
+} 
+.portfolio .container .information .div_content .div2{
+    width: 45%;
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.portfolio .container .information .div_content .div3{
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+}

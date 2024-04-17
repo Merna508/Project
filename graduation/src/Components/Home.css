@@ -5,10 +5,420 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
   }
+  .Home{
+    width: 90%;
+    position: absolute;
+    right: 0;
+  }
+  .home-section{
+    padding: 0px 5%;
+  }
+  .head{
+    /* background-color: #a71515; */
+    color: #777;
+
+  }
+  .head .title-head{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+  }
+  .head .categories{
+    display: flex;
+    justify-content: space-between;
+  }
+  .head .categories p{
+    width: 16%;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    font-size: 9px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0 2px;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+  }
+  .head .categories .selected{
+    background-color: blueviolet;
+    color: white;
+  }
+  .head .categories p:hover{
+    box-shadow: 0 1px 1px 1px blueviolet;
+  }
+
+  /* projects */
+
+  .projects{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+  }
+  .projects .project {
+    background-color: white;
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+  }
+  .projects .project .owner{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .projects .project .owner div{
+    display: flex;
+    
+  }
+
+
+  .projects .project .owner .icon-part .bmIcon{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    color: #777;
+
+  }
+  .projects .project .owner .icon-part .bmIcon:hover{
+    background-color: #cbc9c9;
+    cursor: pointer;
+  }
+
+  .projects .options{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(229, 226, 226, 0.938);
+    width: 90px;
+    height: 100px;
+    z-index: 1;
+    border-radius: 8px;
+    position: absolute;
+    right: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .projects .options span{
+    font-size: 11px;
+    text-align: start;
+    height: 30px;
+    line-height: 30px;
+    color: blueviolet;
+    cursor: pointer;
+    font-weight: 400;
+    border-bottom: 1px solid blueviolet;
+    padding: 2px 7px;
+  }
+  .projects .project span:hover{
+    background-color: rgb(244, 241, 241);
+    cursor: pointer;
+  }
+
+  .projects .project .owner div img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .projects .project .owner div p{
+    font-size: 10px;
+  }
+  .projects .project .owner div i{
+    color: #777;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+
+
+
+  .projects .project p{
+    font-size: 12px;
+    font-family: 500;
+    text-align: start;
+  }
+  .projects .project img{
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+  }
+  .projects .project .react{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+  }
+  .projects .project .react .icon_color p{
+    display: inline-block;
+  }
+  .projects .project .react .icon_color i{
+    color: #777;
+  }
+
+  .projects .project .react .slected{
+    position: absolute;
+    left: 10px;
+    bottom: 25px;
+    color: black;
+    background-color: blueviolet;
+    border-radius: 50%;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+  }
+  .projects .project .react i{
+    cursor: pointer;
+    font-size: 15px;
+    padding-right: 5px;
+  }
+
+  .projects .project .icon_color form{
+    width: 250px;
+    /* height: 200px; */
+    background-color: white;
+    z-index: 2;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+
+  }
+
+  .projects .project form input{
+    outline: none;
+    padding: 5px 5px;
+    border: 1px solid blueviolet;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    border-radius: 20px;
+    width: 100%;
+    background-color:rgb(239, 239, 239) ;
+  }
+  .projects .project .react form div{
+    margin-bottom: 30px;
+  }
+  .projects .project .react form .Message{
+    display: block;
+    width: 200px;
+    margin-bottom: 5px;
+    background-color:rgb(239, 239, 239) ;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  /* }
+  .head .title-head{
+    background-color: #a71515;
+
+  }
+   .content{
+    display: inline;
+    overflow: scroll;
+    margin: 5px;
+   }
+   ::-webkit-scrollbar {
+    width: 10px;   
+   }
+   ::-webkit-scrollbar-thumb {
+    background: rgb(172, 172, 172);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;   
+   }
+   ::-webkit-scrollbar-thumb:hover {
+    background: rgb(131, 131, 131);   
+   }
+   ::-webkit-scrollbar-thumb:active {
+    background: rgb(104, 104, 104);
+   }   
+   .title-head{
+    margin-left: 20px;
+    text-align:left;
+    font-family: tahoma;
+   }
+   .categories{
+    display: flex;
+    padding:5px;
+    margin: 5px;
+   }
+   .category{
+    width:150px;
+    height:45px; 
+    border-radius: 50px;
+    background-color: #ffffff;
+    margin: 5px;
+    padding:8px;
+    border: 1px solid gray;
+    text-align: center;
+   }
+   .category:hover{
+    background: #7413D6;
+    color: #ffffff;
+   }
+   .fcategory{
+    background: #7413D6;
+
+   }
+   .cat-w{
+    width:200px;
+    height:50px;
+   }
+  .head{
+    padding: 20px;
+  }
+  .projects{
+    width:89%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    margin: auto;
+    padding:25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+  }
+  .project{
+    background-color: rgb(255, 255, 255);
+    width:300px;
+    height: 200px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+  }
+  .project:hover{
+    background-color:#F9F6FF;
+  }
+  .owner{
+    display: flex;
+    width:300px;
+    margin: 0 5px;
+    height: auto;
+    position: relative;
+  }
+  .owner-img{
+    padding: 5px;
+  }
+  .owner-img img{
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+  }
+  .owner-name{
+    margin-left: 1px;
+  }
+  .icon-part{
+    display: flex;
+    margin-left: 120px;
+  }
+  .bmIcon{
+    color: #D9D9D9;
+  }
+  .edit{
+    padding: 5px;
+    position: relative;
+  }
+  .settings{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 115px;
+    height: 110px;
+    border-radius: 10%;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    display:block;
+    margin-right:30px;
+    margin-left: 0px;
+    cursor: pointer;
+    right: -80px;
+    z-index: 1;
+  }
+  .drop-down{
+    color: #7413D6;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    font-family: Poppins;
+   }
+   .drop-line{
+    border-bottom: 1px solid #00000030;
+   }
+  .option:hover{
+    background-color: #ededed;
+    font-size: 14px;
+    border-radius: 0;
+  }
+  .project-details{
+    width:200px;
+    height:90px;
+    margin:0 30px;
+  }
+  .project-text{
+    margin-bottom: 5px;
+  }
+  .project-text, .profile-img{
+    text-align: left;
+  }
+  .project-img img{
+    width:230px;
+    height: 80px;
+  }
+  .react{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+  }
+  .icon_color{
+    color: rgb(192, 192, 192);
+  }
+  .number-section{
+    color: gray;
+  }
+  .number-section, .react-text, .icon-color, .icon_color{
+     margin: 2px;
+     display: inline;
+  } */
+
+
+
+
+
+
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+  }
+  .Home{
+    width: 85%;
+    position: absolute;
+    right: 0;
+  }
   .home-section{
     margin-left: 150px;
     background-color: #f8f8f8;
-    width: 88%;
   }
   .content{
     background-color: #f8f8f8;
@@ -186,4 +596,4 @@
      margin: 2px;
      display: inline;
   }
-
+ */

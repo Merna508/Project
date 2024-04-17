@@ -1,0 +1,171 @@
+
+.StudentAssignments{
+    width: 90%;
+    position: absolute;
+    right: 0;
+}
+.container_image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 60px;
+}
+.container_image .image2{
+    width: 70%;
+    height: 100px;
+}
+.container_image .image1{
+    width: 30%;
+    height: 150px;
+}
+.container_content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -10px;
+    padding: 0 20px;
+}
+.container_content .container_tasks{
+    width: 68%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.857);
+
+}
+.container_content .container_tasks h2{
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: #777;
+    font-weight: 600;
+    background-color: white;
+
+}
+.container_content .container_tasks .tasks{
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 5px;
+
+}
+.container_content .container_tasks .tasks.selected {
+    border: 2px solid rgb(231, 33, 165);
+    margin: 10px 0;
+    .icon{
+        display: none;
+    }
+  }
+  
+.container_content .container_tasks .tasks .tasks_data{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.container_content .container_tasks .tasks .tasks_data .icon{
+    width: 2px;
+    height: 2px;
+    background-color: rgb(231, 33, 165);
+    position: absolute;
+    left: 50%; 
+    bottom: 0;
+    transform: translateX(-50%); 
+    transition: width 0.3s ease; 
+}
+
+.container_content .container_tasks .tasks .tasks_data:hover .icon {
+    width: 100%; 
+
+}
+
+
+.container_content .container_tasks .tasks span:first-child{
+    width: 23px;
+    height: 23px;
+    background-color: blue;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 23px;
+    color: white;
+}
+.container_content .container_tasks .tasks span{
+    font-size: 10px;
+    color: #777;
+}
+.container_content .feedback{
+    width: 26%;
+    background-color: rgba(255, 255, 255, 0.857);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+.container_content .feedback h2{
+    font-size: 15px;
+    font-weight: 600;
+    color: #777;
+    text-align: center;
+}
+.container_content .feedback p{
+    font-size: 10px;
+    color: #777;
+    margin-top: 20px;
+}
+.container_content .feedback p span{
+    color: black;
+    font-weight: 500;
+}
+.container_content .feedback p:last-child{
+    border: 1px solid #777;
+    padding: 4px;
+    border-radius: 4px;
+}
+.container_content .container_tasks .tasks .show_div{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.container_content .container_tasks .tasks .show_div .Descreption{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.container_content .container_tasks .tasks .show_div .Descreption p{
+    font-size: 10px;
+    color: #777;
+    z-index: 3;
+    padding: 5px 0;
+}
+.container_content .container_tasks .tasks .show_div .Descreption i{
+    padding: 15px;
+    color: rgb(224, 194, 83);
+}
+.container_content .container_tasks .tasks .show_div .Upload{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #777;
+    margin-left: 10px;
+}
+.container_content .container_tasks .tasks .show_div .Upload p{
+    font-size: 12px;
+
+}
+.container_content .container_tasks .tasks .show_div .Upload a{
+    color: white;
+    background-color: blue;
+    padding: 5px 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+}
+.container_content .container_tasks .tasks .show_div .Upload a:hover{
+    background-color: rgb(137, 212, 9);
+
+}

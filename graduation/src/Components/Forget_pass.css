@@ -1,0 +1,89 @@
+:root {
+  --projectColor: #7513d6;
+  --dataColor: #5443c3;
+  --borderColor: #777;
+  --borderColorWhite: white;
+
+  --fontSize1: 20px;
+  --fontSize2: 15px;
+  --fontSize3: 12px;
+  --fontSize4: 10px;
+}
+.Forget_pass {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--projectColor);
+  display: flex;
+  padding: 20px;
+}
+.Forget_pass .text {
+  width: 50%;
+}
+.Forget_pass .text div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-top: 70px;
+}
+.Forget_pass .text div h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.Forget_pass .text div p {
+  color: white;
+  font-size: var(--fontSize3);
+  font-weight: 400;
+}
+.Forget_pass .box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Forget_pass .box .contect {
+  width: 60%;
+  background-color: var(--borderColorWhite);
+  border-radius: 10px;
+  border: 1px solid var(--dataColor);
+}
+.Forget_pass .box .contect .setting {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--dataColor);
+  width: 100%;
+  padding: 5px 10px;
+  color: var(--borderColorWhite);
+  border-radius: 10px;
+  font-size: var(--fontSize3);
+}
+.Forget_pass .box .contect .container_data {
+  width: 100%;
+  padding: 20px;
+}
+.Forget_pass .box .contect .container_data .Edit {
+  color: var(--borderColor);
+  font-size: var(--fontSize3);
+}
+.Forget_pass .box .contect .container_data h6 {
+  background-color: rgb(234, 229, 229);
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--borderColor);
+  margin-top: 10px;
+  font-size: var(--fontSize3);
+}
+.Forget_pass .box .contect .container_data .div_input label {
+  color: var(--borderColor);
+  font-size: var(--fontSize4);
+}
+.Forget_pass .box .contect .container_data .div_input input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  border: 1px solid var(--projectColor);
+  border-radius: 3px;
+  font-size: var(--fontSize3);
+  padding: 3px;
+}

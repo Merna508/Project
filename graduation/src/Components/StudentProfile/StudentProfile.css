@@ -1,0 +1,241 @@
+:root{
+    --mainColor: #7413D6
+}
+.container_StudentProfile{
+    width: 90%;
+    position: absolute;
+    right: 0;
+}
+.countainer_images{
+    height: 230px;
+    top: 30px;
+}
+.countainer_images .image1{
+    width: 100%;
+    height: 160px;
+
+}
+.countainer_images .countainer_image_and_Icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.countainer_images .countainer_image_and_Icon div{
+    display: flex;
+    align-items: end;
+    margin-top: -70px;
+}
+.countainer_images .image1{
+    width: 100%;
+}
+.countainer_images .countainer_image_and_Icon div .image2{
+    background-color: rgb(245, 225, 125);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.countainer_images .countainer_image_and_Icon div p h3{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--mainColor);
+    margin: 0;
+
+
+}
+.countainer_images .countainer_image_and_Icon div p span{
+    font-weight: 400;
+    font-size: 10;
+    color: var(--mainColor);
+    opacity: 70%;
+}
+.countainer_images .countainer_image_and_Icon i{
+    width: 25px;
+    height: 25px;
+    background-color: var(--mainColor);
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+.countainer_parent{
+    display: flex;
+    /* background-color: rgb(227, 235, 242); */
+
+}
+.countainer_parent .countainer_About{
+    width: 22%;
+    height: 200px;
+    margin: 0px 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    position: static;
+    margin-top: 15px;
+}
+/* .countainer_parent .gggg{
+    width: 25%;
+    height: 200px;
+    margin: 15px 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f71b1b;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+
+} */
+
+.countainer_parent .countainer_About h2{
+    color: var(--mainColor);
+    font-size: 20px;
+}
+.countainer_parent .countainer_About p{
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--mainColor);
+}
+.countainer_parent .countainer_About p span{
+    width: 100px;
+    display: inline-block;
+    margin-left: 5px;
+    opacity: 70%;
+    font-weight: 400;
+}
+
+.countainer_parent .countainer_Data{
+    margin: 18px 15px;
+    width: 70%;
+    top: 0;
+    right: 0;    
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    position: absolute;
+    left: 25%;
+    background-color: #7413D6;
+}
+.countainer_parent .countainer_Data .project_title{
+    display: flex;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 15px 0 10px 0;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 5px 5px 0 0;
+
+}
+.countainer_Data .project_title .University_projects,
+.countainer_Data .project_title .Personal_projects{
+    font-size: 17px;
+    font-weight: 400;
+    color: #7413D6;
+    cursor: pointer;
+}
+.countainer_Data .project_title .University_projects.act{
+    background-color: #7413D6;
+    color: white;
+    width: 160px;
+    padding: 3px 5px;
+    border-radius: 20px;
+
+}
+.countainer_Data .project_API{
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px ;
+
+}
+
+
+.project_API .countainer_API{
+    width: 40%;
+    height: 180px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.project_API .hider_API{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 3px 10px;
+}
+.project_API .hider_API .box{
+    display: flex;
+    align-items: center;
+}
+.project_API .hider_API .box img{
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.project_API .hider_API .box span{
+    font-size: 10px;
+    font-weight: 400;
+    color: #777;
+}
+.project_API .hider_API i{
+    color: #777;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+
+}
+.project_API .hider_API i:hover{
+    background-color: #e8e7e7;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.project_API h2{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: start;
+    color: #777;
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+.project_API .box_img{
+    width: 100%;
+    height: 70px;
+    margin: auto;
+}
+.countainer_API div{
+    color: #777;
+    display: flex;
+    justify-content: space-around;
+
+}
+.countainer_API .react i{
+    margin-right: 5px;
+    color: #777;
+    cursor: pointer;
+}
+.countainer_API .react .slected{
+    margin-right: 5px;
+    color: black;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    top: -7px;
+    right:-8px;
+    background-color: #7413D6;
+    border-radius: 50%;
+    position: absolute;
+}
